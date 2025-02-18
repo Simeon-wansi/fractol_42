@@ -1,7 +1,7 @@
 NAME = fractol
 
 # Source files
-SRC = main.c string_utils.c init.c
+SRC = main.c string_utils.c init.c math_utils.c render.c event.c
 
 # Minilibx path
 MLX_DIR = minilibx_opengl_20191021

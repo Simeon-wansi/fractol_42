@@ -6,7 +6,7 @@
 /*   By: sngantch <sngantch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 03:46:29 by sngantch          #+#    #+#             */
-/*   Updated: 2025/02/16 05:22:33 by sngantch         ###   ########.fr       */
+/*   Updated: 2025/02/18 22:05:53 by sngantch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,14 @@ int main(int ac,  char **av)
     t_fractal fractal;
     
     if ((2 == ac && !ft_strncmp(av[1], "mandelroot", 10))
-        || (4 == ac && !strncmp(av[1], "julia", 5)))
+        || (4 == ac && !ft_strncmp(av[1], "julia", 5)))
     {
         fractal.name = av[1];
         // TL; DR
         // Id the promps is coorect , kick off th app
         fractal_init(&fractal);
-        // fractal_render(&fractal);
+        fractal_render(&fractal);
+        // events_init(&fractal);
         mlx_loop(fractal.mlx_connection);
     }
     else
