@@ -30,11 +30,7 @@ static void events_init(t_fractal *fractal)
     //         ButtonPressMask, // x_max
     //         mouse_handler, // todo later
     //         fractal ); // param
-    mlx_hook(fractal->mlx_window, //winptr
-            DestroyNotify, // x_event
-            StructureNotifyMask, // x_max
-            close_handler, // todo later
-            fractal ); // param
+//    
 }
 
 

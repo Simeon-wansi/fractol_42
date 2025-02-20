@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main1.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sngantch <sngantch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 18:56:51 by sngantch          #+#    #+#             */
-/*   Updated: 2025/02/15 23:13:43 by sngantch         ###   ########.fr       */
+/*   Updated: 2025/02/19 22:45:13 by sngantch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,29 @@ int	close_window(t_vars *vars)
 	exit(0); // Properly exit the program
 }
 
-// int	main(void)
-// {
-// 	t_vars	vars;
+int	main(void)
+{
+	t_vars	vars;
 
-// 	vars.mlx = mlx_init();
-// 	if (!vars.mlx)
-// 		return (1);
+	vars.mlx = mlx_init();
+	if (!vars.mlx)
+		return (1);
 	
-// 	vars.win = mlx_new_window(vars.mlx, 1920, 1080, "My Window");
-// 	if (!vars.win)
-// 		return (1);
+	vars.win = mlx_new_window(vars.mlx, 1920, 1080, "My Window");
+	if (!vars.win)
+		return (1);
 
-// 	vars.img.img = mlx_new_image(vars.mlx, 1920, 1080);
-// 	vars.img.addr = mlx_get_data_addr(vars.img.img, &vars.img.bits_per_pixel, &vars.img.line_length, &vars.img.endian);
+	vars.img.img = mlx_new_image(vars.mlx, 1920, 1080);
+	vars.img.addr = mlx_get_data_addr(vars.img.img, &vars.img.bits_per_pixel, &vars.img.line_length, &vars.img.endian);
 
-// 	// Handle ESC key (keycode 53 on macOS)
-// 	mlx_hook(vars.win, 17, 0, (void *)close_window, &vars);  // Handle window close event
-// 	mlx_key_hook(vars.win, (void *)close_window, &vars);  // Handle ESC key
+	// Handle ESC key (keycode 53 on macOS)
+	mlx_hook(vars.win, 17, 0, (void *)close_window, &vars);  // Handle window close event
+	mlx_key_hook(vars.win, (void *)close_window, &vars);  // Handle ESC key
 
-// 	mlx_loop(vars.mlx);
+	mlx_loop(vars.mlx);
 
-// 	return (0);
-// }
+	return (0);
+}
 
 
 
@@ -70,22 +70,22 @@ int	close_window(t_vars *vars)
 // }				t_data;
 
 
-int	main(void)
-{
-	void	*mlx;
-	t_data	img;
+// int	main(void)
+// {
+// 	void	*mlx;
+// 	t_data	img;
 
-	mlx = mlx_init();
-	img.img = mlx_new_image(mlx, 1920, 1080);
+// 	mlx = mlx_init();
+// 	img.img = mlx_new_image(mlx, 1920, 1080);
 
-	/*
-	** After creating an image, we can call `mlx_get_data_addr`, we pass
-	** `bits_per_pixel`, `line_length`, and `endian` by reference. These will
-	** then be set accordingly for the *current* data address.
-	*/
-	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
-								&img.endian);
-}
+// 	/*
+// 	** After creating an image, we can call `mlx_get_data_addr`, we pass
+// 	** `bits_per_pixel`, `line_length`, and `endian` by reference. These will
+// 	** then be set accordingly for the *current* data address.
+// 	*/
+// 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
+// 								&img.endian);
+// }
 
 // int main(void)
 // {

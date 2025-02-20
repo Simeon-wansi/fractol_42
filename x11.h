@@ -6,7 +6,7 @@
 /*   By: sngantch <sngantch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 22:19:54 by sngantch          #+#    #+#             */
-/*   Updated: 2025/02/18 23:25:11 by sngantch         ###   ########.fr       */
+/*   Updated: 2025/02/20 19:58:23 by sngantch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 # define NoExpose          14
 # define VisibilityNotify  15
 # define CreateNotify      16
-# define DestroyNotify     17
+
 # define UnmapNotify       18
 # define MapNotify         19
 # define MapRequest        20
@@ -69,7 +69,7 @@
 # define KeymapStateMask   (1L << 14)
 # define ExposureMask      (1L << 15)
 # define VisibilityChangeMask (1L << 16)
-# define StructureNotifyMask (1L << 17)
+
 # define ResizeRedirectMask (1L << 18)
 # define SubstructureNotifyMask (1L << 19)
 # define SubstructureRedirectMask (1L << 20)
@@ -87,12 +87,14 @@
 # define XK_Pause                         0xff13  /* Pause, hold */
 # define XK_Scroll_Lock                   0xff14
 # define XK_Sys_Req                       0xff15
-# define XK_Escape                        0xff1b
+# define XK_Escape                        53//0xff1b
 # define XK_Delete                        0xffff  /* Delete, rubout */
 # define XK_Up                            126//0xff52  /* Move up, up arrow */
 # define XK_Right                         124//0xff53  /* Move right, right arrow */
 # define XK_Down                          125 //0xff54  /* Move down, down arrow */
 # define XK_Left                          123 //0xff51  /* Move left, left arrow */
+# define DestroyNotify                    53//17
+# define StructureNotifyMask              0 //= 131072
 # define XK_plus                          0x002b  /* U+002B PLUS SIGN */
 # define XK_minus                         0x002d  /* U+002D HYPHEN-MINUS */
 
